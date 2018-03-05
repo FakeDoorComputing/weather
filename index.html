@@ -9,29 +9,30 @@
 	<script src="jquerymobile/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
 	<script src='js/Ractive.js'></script>
 	<script src='js/index.js'></script>
+	<script src="cordova.js"></script>
 </head>
 
 <body>
-    
+
     <div data-role="page" id="feedPage">
-      
+
    		<div data-role="header">
         	<h1>My Feed</h1>
       	</div>
-      
+
       	<div data-role="content">
-      		
+
           	<!-- RACTIVE binding location - where to display data - a ListView -->
     		<ul data-role="listview" id='container'></ul>
-            
+
         </div>
-    
+
 	</div>
 
 
 <!--Ractive template - how to display data-->
     <script id='myTemplate' type='text/ractive'>
-	
+
 			{{#weather}}
 			<li>{{weather_state_name}}</li>
 			{{/weather}}
